@@ -3,6 +3,8 @@
   --color-primary: #436850;
   --color-secondary: #ADBC9F;
   --color-light: #FBFADA;
+  --gap-small: 15px;
+  --gap-large: 40px;
 }
 
 .container {
@@ -18,7 +20,32 @@
 .sidebar {
   background-color: var(--color-dark);
   color: white;
-  padding: 15px 50px 15px 20px;
+  padding: var(--gap-small) var(--gap-large) var(--gap-small) var(--gap-small);
+
+  display: grid;
+  gap: var(--gap-large);
+}
+
+.location li {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: grid;
+  gap: var(--gap-small);
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+
+li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .main-content {
