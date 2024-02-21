@@ -53,12 +53,12 @@
   padding: var(--gap-small) var(--gap-large) var(--gap-small) var(--gap-small);
 
   display: grid;
+  align-content: start;
   gap: var(--gap-large);
 }
 
-.location li {
-  font-size: 1.3rem;
-  font-weight: bold;
+.location h1 {
+  margin: 0;
 }
 
 .menu {
@@ -80,10 +80,67 @@ li > a {
 
 .main-content {
   background-color: var(--color-light);
+
+  display: grid;
+  grid-template: 1fr 1fr / 2fr minmax(200px, 1fr);
+  gap: var(--gap-small);
+  padding: var(--gap-small);
+}
+
+.projects {
+  grid-row: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  gap: var(--gap-small);
+}
+
+.main-content h2 {
+  grid-column: 1 / -1;
+}
+
+.main-content h2,
+.main-content h3,
+.main-content p {
+  margin: 0;
+}
+
+.card {
+  background-color: white;
+  padding: var(--gap-small);
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px #ccc;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.card-buttons {
+  margin-top: var(--gap-small);
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: var(--gap-small);
 }
 
 button {
   appearance: none;
+}
+
+.announcements article {
+  padding: var(--gap-small);
+  border-top: #ccc solid 1px;
+}
+
+.announcements article:first-child {
+  border-top: none;
+}
+
+.announcements h4 {
+  margin: 0;
 }
 
 /* 
@@ -91,4 +148,6 @@ TO DO LIST:
 Style search button - FONT AWESOME https://www.w3schools.com/howto/howto_css_search_button.asp
 Style input bar
 Style other buttons
-Check why header-icons have a top gap */
+Check why header-icons have a top gap
+Add card buttons to all cards
+*/
