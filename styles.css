@@ -3,7 +3,7 @@
   --color-primary: #436850;
   --color-secondary: #ADBC9F;
   --color-light: #FBFADA;
-  --gap-small: 15px;
+  --gap-small: 20px;
   --gap-medium: 30px;
   --gap-large: 40px;
   --profile-small: 40px;
@@ -19,6 +19,10 @@
   grid-template: auto 1fr / auto 1fr;
 }
 
+h2 {
+  font-size: 1.3em;
+}
+
 button {
   appearance: none;
   font-size: 1rem;
@@ -26,8 +30,9 @@ button {
 
 ul,
 li {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 li > a {
@@ -90,6 +95,7 @@ li > a {
 
 .greeting {
   font-size: 0.8rem;
+  font-weight: bold;
 
   display: grid;
   grid-template: auto auto / auto 1fr;
@@ -112,6 +118,7 @@ li > a {
   background-color: var(--color-dark);
   color: white;
   padding: var(--gap-small) var(--gap-large) var(--gap-small) var(--gap-small);
+  font-size: 1.5rem;
 
   display: grid;
   align-content: start;
@@ -226,6 +233,7 @@ li > a {
 .trending a {
   text-decoration: none;
   color: #000;
+  font-size: 0.9rem;
 }
 
 .trending article {
@@ -247,12 +255,7 @@ li > a {
 
 /* 
 TO DO LIST:
-Fonts
-Icons
-Profile photos
-Style search button - FONT AWESOME https://www.w3schools.com/howto/howto_css_search_button.asp
-Style input bar
-Style other buttons
+Fix gap between header-icons
 Check why header-icons have a top gap
-Add card buttons to all cards
+Fix card heights
 */
