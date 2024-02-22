@@ -5,6 +5,11 @@
   --color-light: #FBFADA;
   --gap-small: 15px;
   --gap-large: 40px;
+  font-size: 18px;
+}
+
+* {
+  font-family: Figtree, Tahoma, sans-serif
 }
 
 .container {
@@ -87,16 +92,6 @@ li > a {
   padding: var(--gap-small);
 }
 
-.projects {
-  grid-row: 1 / -1;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  grid-auto-rows: 1fr;
-  gap: var(--gap-small);
-}
-
 .main-content h2 {
   grid-column: 1 / -1;
 }
@@ -117,6 +112,20 @@ li > a {
   grid-template-rows: 1fr auto;
 }
 
+.projects {
+  grid-row: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  gap: var(--gap-small);
+}
+
+.projects h3 {
+  margin-bottom: 3px;
+}
+
 .card-buttons {
   margin-top: var(--gap-small);
 
@@ -128,6 +137,12 @@ li > a {
 
 button {
   appearance: none;
+  font-size: 1rem;
+}
+
+.announcements h2,
+.trending h2 {
+  margin-bottom: var(--gap-small);
 }
 
 .announcements article {
@@ -143,8 +158,28 @@ button {
   margin: 0;
 }
 
+.trending article {
+  padding: var(--gap-small);
+  display: grid;
+  grid-template: auto auto / 50px auto;
+  gap: var(--gap-small);
+}
+
+.profile-photo {
+  grid-row: 1 / -1;
+  height: 50px;
+  width: 50px;
+}
+
+.project-name {
+  color: #555;
+}
+
 /* 
 TO DO LIST:
+Fonts
+Icons
+Profile photos
 Style search button - FONT AWESOME https://www.w3schools.com/howto/howto_css_search_button.asp
 Style input bar
 Style other buttons
