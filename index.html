@@ -7,18 +7,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Font for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Admin Dashboard</title>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <form class="search-bar" action="">
-        <button>Search</button>
+        <button><i class="fa fa-search" aria-hidden="true"></i></button>
         <input type="text" name="search">
       </form>
 
       <div class="header-icons">
-        <div>Alert</div>
+        <div><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></div>
         <img src="./profile-photos/shark.png" alt="profile photo" class="profile-photo">
         <p><b>Morgan Oakley</b></p>
       </div>
@@ -62,47 +64,55 @@
       <div class="projects">
         <h2>Your Projects</h2>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Super Cool Project</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim deserunt esse, ipsa magni necessitatibus reprehenderit?</p>
           </article>
-          <div class="card-buttons">
-            <p>Favourite</p>
-            <p>View</p>
-            <p>Share</p>
-          </div>
+          <!-- <div class="card-buttons">
+            <button>
+              <i class="fa fa-star-o"></i>
+              <span class="overlay-lower-right">+</span>
+            </button>
+            <button>
+              <i class="fa fa-eye"></i>
+              <span class="overlay-lower-right">+</span>
+            </button>
+            <button>
+              <i class="fa fa-share-alt fa-rotate-270"></i>
+            </button>
+          </div> -->
         </div>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Less Cool Project</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatem debitis distinctio natus soluta nesciunt corrupti repellendus! Excepturi, totam ut!</p>
           </article>
         </div>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Impossible App</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, iste.</p>
           </article>
         </div>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Easy Peasy App</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias praesentium itaque illo dignissimos ex aliquam, nisi cum voluptatibus tempore est sint, sunt totam ea ducimus facilis nam repellat omnis velit.</p>
           </article>
         </div>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Ad Blocker</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis fugit aliquam iste magni voluptatum?</p>
           </article>
         </div>
 
-        <div class="card">
+        <div class="card project">
           <article>
             <h3>Money Maker</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates omnis possimus laudantium nobis expedita fuga blanditiis vitae voluptatum consectetur ipsum?</p>
@@ -163,5 +173,27 @@
     </div>
 
   </div>
+
+  <script>
+    const projects = document.querySelectorAll(".card.project");
+    for (i = 0; i < projects.length; i++) {
+      const cardButtons = document.createElement("div");
+      cardButtons.innerHTML = `
+        <div class="card-buttons">
+          <button>
+            <i class="fa fa-star-o"></i>
+            <span class="overlay-lower-right">+</span>
+          </button>
+          <button>
+            <i class="fa fa-eye"></i>
+            <span class="overlay-lower-right">+</span>
+          </button>
+          <button>
+            <i class="fa fa-share-alt fa-rotate-270"></i>
+          </button>
+        </div>`
+      projects[i].appendChild(cardButtons);
+    }
+  </script>
 </body>
 </html>
