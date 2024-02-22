@@ -4,6 +4,7 @@
   --color-secondary: #ADBC9F;
   --color-light: #FBFADA;
   --gap-small: 15px;
+  --gap-medium: 30px;
   --gap-large: 40px;
   --profile-small: 40px;
   font-size: 18px;
@@ -45,6 +46,18 @@ li > a {
   gap: var(--gap-small);
 }
 
+.search-bar {
+  display: flex;
+  gap: var(--gap-small);
+}
+
+.search-bar input {
+  flex: 1;
+  background-color: #ddd;
+  border: none;
+  border-radius: 15px;
+}
+
 .header-icons,
 .header-buttons {
   display: grid;
@@ -60,6 +73,19 @@ li > a {
 .header-icons > img {
   height: var(--profile-small);
   width: var(--profile-small);
+}
+
+.header-buttons button {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 15px;
+  padding: 5px var(--gap-medium);
+  border: none;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  opacity: 0.8;
 }
 
 .greeting {
@@ -163,8 +189,19 @@ li > a {
   gap: var(--gap-small);
 }
 
-.card-buttons button {
+.card-buttons button,
+.search-bar button,
+.header-icons button {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
 
+.card-buttons button:hover,
+.search-bar button:hover,
+.header-icons button:hover {
+  opacity: 0.6;
 }
 
 .announcements h2,

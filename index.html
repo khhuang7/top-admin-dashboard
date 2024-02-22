@@ -15,12 +15,12 @@
   <div class="container">
     <div class="header">
       <form class="search-bar" action="">
-        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        <button><i class="fa fa-search" aria-label="search"></i></button>
         <input type="text" name="search">
       </form>
 
       <div class="header-icons">
-        <div><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></div>
+        <button><i class="fa fa-bell-o fa-lg" aria-label="alerts"></i></button>
         <img src="./profile-photos/shark.png" alt="profile photo" class="profile-photo">
         <p><b>Morgan Oakley</b></p>
       </div>
@@ -181,15 +181,15 @@
       cardButtons.innerHTML = `
         <div class="card-buttons">
           <button>
-            <i class="fa fa-star-o"></i>
-            <span class="overlay-lower-right">+</span>
+            <i class="fa fa-star-o" aria-label="add project to favourites"></i>
+            <span class="overlay-lower-right" aria-hidden="true">+</span>
           </button>
           <button>
-            <i class="fa fa-eye"></i>
-            <span class="overlay-lower-right">+</span>
+            <i class="fa fa-eye" aria-label="add project to view"></i>
+            <span class="overlay-lower-right" aria-hidden="true">+</span>
           </button>
           <button>
-            <i class="fa fa-share-alt fa-rotate-270"></i>
+            <i class="fa fa-share-alt" aria-label="share project"></i>
           </button>
         </div>`
       projects[i].appendChild(cardButtons);
