@@ -5,6 +5,7 @@
   --color-light: #FBFADA;
   --gap-small: 15px;
   --gap-large: 40px;
+  --profile-small: 40px;
   font-size: 18px;
 }
 
@@ -24,6 +25,7 @@
   display: grid;
   grid-template: auto auto / 1fr auto;
   align-items: center;
+  gap: var(--gap-small);
 }
 
 .header-icons,
@@ -32,6 +34,15 @@
   grid-auto-flow: column;
   align-items: center;
   gap: var(--gap-small);
+}
+
+.header-icons {
+  grid-template-rows: var(--profile-small);
+}
+
+.header-icons > img {
+  height: var(--profile-small);
+  width: var(--profile-small);
 }
 
 .greeting {
@@ -44,6 +55,8 @@
 
 .greeting > img {
   grid-row: 1 / -1;
+  width: 60px;
+  height: 60px;
 }
 
 .username {
@@ -145,12 +158,12 @@ button {
   margin-bottom: var(--gap-small);
 }
 
-.announcements article {
+.announcements a {
   padding: var(--gap-small);
   border-top: #ccc solid 1px;
 }
 
-.announcements article:first-child {
+.announcements a:first-child {
   border-top: none;
 }
 
@@ -158,11 +171,17 @@ button {
   margin: 0;
 }
 
+.announcements a,
+.trending a {
+  text-decoration: none;
+  color: #000;
+}
+
 .trending article {
   padding: var(--gap-small);
   display: grid;
   grid-template: auto auto / 50px auto;
-  gap: var(--gap-small);
+  column-gap: var(--gap-small);
 }
 
 .profile-photo {
