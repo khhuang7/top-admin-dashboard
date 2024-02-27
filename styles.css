@@ -208,6 +208,7 @@ li > a {
   display: grid;
   grid-auto-flow: column;
   justify-content: end;
+  align-self: end;
   gap: var(--gap-small);
 }
 

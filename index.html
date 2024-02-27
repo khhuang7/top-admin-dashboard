@@ -69,19 +69,6 @@
             <h3>Super Cool Project</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim deserunt esse, ipsa magni necessitatibus reprehenderit?</p>
           </article>
-          <!-- <div class="card-buttons">
-            <button>
-              <i class="fa fa-star-o"></i>
-              <span class="overlay-lower-right">+</span>
-            </button>
-            <button>
-              <i class="fa fa-eye"></i>
-              <span class="overlay-lower-right">+</span>
-            </button>
-            <button>
-              <i class="fa fa-share-alt fa-rotate-270"></i>
-            </button>
-          </div> -->
         </div>
 
         <div class="card project">
@@ -178,20 +165,20 @@
     const projects = document.querySelectorAll(".card.project");
     for (i = 0; i < projects.length; i++) {
       const cardButtons = document.createElement("div");
+      cardButtons.classList.add("card-buttons");
       cardButtons.innerHTML = `
-        <div class="card-buttons">
-          <button>
-            <i class="fa fa-star-o" aria-label="add project to favourites"></i>
-            <span class="overlay-lower-right" aria-hidden="true">+</span>
-          </button>
-          <button>
-            <i class="fa fa-eye" aria-label="add project to view"></i>
-            <span class="overlay-lower-right" aria-hidden="true">+</span>
-          </button>
-          <button>
-            <i class="fa fa-share-alt" aria-label="share project"></i>
-          </button>
-        </div>`
+        <button>
+          <i class="fa fa-star-o" aria-label="add project to favourites"></i>
+          <span class="overlay-lower-right" aria-hidden="true">+</span>
+        </button>
+        <button>
+          <i class="fa fa-eye" aria-label="add project to view"></i>
+          <span class="overlay-lower-right" aria-hidden="true">+</span>
+        </button>
+        <button>
+          <i class="fa fa-share-alt" aria-label="share project"></i>
+        </button>
+        `
       projects[i].appendChild(cardButtons);
     }
   </script>
